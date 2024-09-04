@@ -1,0 +1,64 @@
+{
+    "name": "quarkly-export",
+    "dependencies": {
+        "@quarkly/atomize": "1.0.20",
+        "@quarkly/community-kit": "0.0.87",
+        "@quarkly/components": "0.2.75",
+        "@quarkly/widgets": "0.2.75",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "ajv": "^8.17.1",
+        "ajv-keywords": "^5.1.0",
+        "firebase": "^10.13.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-helmet": "latest",
+        "react-icons": "^3.9.0",
+        "react-loader-spinner": "^6.1.6",
+        "react-router-dom": "^5.1.2",
+        "react-router-hash-link": "^1.2.2",
+        "react-scripts": "^5.0.1",
+        "schema-utils": "^4.2.0",
+        "styled-components": "^5.0.1",
+        "webpack-dev-server": "^5.0.4"
+    },
+    "scripts": {
+        "start": "react-scripts  --openssl-legacy-provider start",
+        "build": "npm run sitemap && CI=false react-scripts build",
+        "build:ci": "cross-env CI=false npm run build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "sitemap": "node ./sitemap-builder.js"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "quarklyMeta": {
+        "projectUid": "66cff637e778710018d2fab0",
+        "type": "create-react-app"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.3",
+        "@babel/preset-env": "^7.14.2",
+        "@babel/preset-react": "^7.13.13",
+        "@babel/register": "^7.13.16",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "cross-env": "^7.0.3",
+        "react-router-sitemap": "^1.2.0"
+    },
+    "version": "0.1.0",
+    "private": true
+}
