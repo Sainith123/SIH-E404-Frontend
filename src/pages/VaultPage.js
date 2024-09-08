@@ -398,59 +398,6 @@ const VaultPage = () => {
         setFile(e.target.files[0]);
     };
     
-    // const handleUpload = async () => {
-    //     if (!file) return;
-
-    //     setUploading(true);
-    //     const userId = auth.currentUser.uid;
-    //     const fileRef = ref(storage, `user-uploads/${userId}/${file.name}`);
-    //     try {
-    //         await uploadBytes(fileRef, file);
-    //         const url = await getDownloadURL(fileRef);
-    //         setFileURL(url);
-
-    //         await setDoc(doc(db, 'userFiles', userId), {
-    //             fileName: file.name,
-    //             fileURL: url,
-    //             uploadedAt: new Date(),
-    //         }, { merge: true });
-
-    //     } catch (error) {
-    //         console.error('Upload failed:', error);
-    //     } finally {
-    //         setUploading(false);
-    //     }
-    // };
-
-
-    // const handleUpload = async () => {
-    //     if (!file) return;
-    
-    //     setUploading(true);
-    //     const userId = auth.currentUser.uid;
-    //     const fileRef = ref(storage, `user-uploads/${userId}/${file.name}`);
-    //     const secretCode = generateCode();  // Generate the 7-digit code here
-    
-    //     try {
-    //         await uploadBytes(fileRef, file);
-    //         const url = await getDownloadURL(fileRef);
-    //         setFileURL(url);
-    
-    //         // Store the file data along with the generated code in Firestore
-    //         await setDoc(doc(db, 'userFiles', userId), {
-    //             fileName: file.name,
-    //             fileURL: url,
-    //             uploadedAt: new Date(),
-    //             secretCode: secretCode  // Add the secret code here
-    //         }, { merge: true });
-    
-    //     } catch (error) {
-    //         console.error('Upload failed:', error);
-    //     } finally {
-    //         setUploading(false);
-    //     }
-    // };
-
 
     const handleUpload = async () => {
         if (!file) return;
@@ -538,7 +485,7 @@ const VaultPage = () => {
     };
 
     return (
-        <div style={{ padding: '20px', backgroundColor: '#f5f5f5', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
+        <div style={{ padding: '20px', backgroundColor: '#1b1b1b', minHeight: '100vh', fontFamily: 'Arial, sans-serif' }}>
             {/* Header */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 20px', backgroundColor: '#333', color: '#fff', position: 'relative' }}>
                 <a href="/" style={{ display: 'flex', flexDirection: 'row', gap: '18px', alignItems: 'center', justifyContent: 'center' }}>
@@ -555,7 +502,7 @@ const VaultPage = () => {
 
             {/* Main Content */}
             <div style={{ padding: '40px', textAlign: 'center' }}>
-                <h1 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '20px' }}>Vault</h1>
+                <h1 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '20px', color: '#fff' }}>Vault</h1>
                 {/* Form Section */}
                 <div style={{ margin: '20px auto', alignItems: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column', width: '300px', padding: '20px', border: '1px solid #ccc', borderRadius: '10px', backgroundColor: '#fff', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)' }}>
                     {/* Action Select */}
@@ -573,37 +520,13 @@ const VaultPage = () => {
                         >
                             <option value="">Select</option>
                             <option value="Hyperlink">Hyperlink</option>
-                            <option value="UPI">UPI</option>
+                            <option value="Audio">Audio</option>
                             <option value="Image">Image</option>
                             <option value="Video">Video</option>
-                            <option value="File download">File download</option>
                             <option value="3d assets file">3d assets file</option>
                         </select>
                     </div>
 
-                   {/* User Restrictions Text Area */}
-                    {/* <div style={{ marginBottom: '20px', textAlign: 'left', width: '100%' }}>
-                        <label style={{ fontSize: '16px', marginBottom: '5px', display: 'block' }}>User Restrictions</label>
-                        <textarea
-                            value={userRestrictions}
-                            onChange={(e) => setUserRestrictions(e.target.value)}
-                            placeholder="Enter User Restrictions"
-                            style={{ width: '100%', height: '40px', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-                        />
-                    </div>
-
-                    <div style={{ marginBottom: '20px', textAlign: 'left', width: '100%' }}>
-                        <label style={{ fontSize: '16px', marginBottom: '5px', display: 'block' }}>Age Restrictions</label>
-                        <select
-                            onChange={(e) => setAgeRestrictions(e.target.value)}
-                            value={ageRestrictions}
-                            style={{ width: '   100%', padding: '10px', borderRadius: '5px', border: '1px solid #ccc' }}
-                        >
-                            <option value="">Select</option>
-                            <option value="No">No</option>
-                            <option value="Below 18">Below 18</option>
-                        </select>
-                    </div> */}
 
                     {/* User Restrictions Text Area */}
                         <div style={{ marginBottom: '20px', textAlign: 'left', width: '100%' }}>
