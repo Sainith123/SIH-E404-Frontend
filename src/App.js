@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export default () => (
+const App = () => (
     <Router>
         <GlobalStyles />
         <Switch>
@@ -30,3 +30,5 @@ export default () => (
         </Switch>
     </Router>
 );
+
+export default App;
