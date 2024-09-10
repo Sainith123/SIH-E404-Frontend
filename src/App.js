@@ -25,7 +25,7 @@ const App = () => (
             <Route exact path="/vault" component={VaultPage} />
 			<Route exact path='/work' component={Work}/>
 			<Route exact path='/loginsignup' component={Loginsignup}/>
-            <Route path="/manage-assets" component={ManageAssetsPage} /> 
+            {/* <Route path="/manage-assets" component={ManageAssetsPage} />  */}
 			<Route component={Page404}/>
         </Switch>
     </Router>
